@@ -1,0 +1,24 @@
+function req(name: string): string {
+  const v = process.env[name];
+  if (!v) throw new Error(`Missing env: ${name}`);
+  return v;
+}
+
+function opt(name: string, fallback = ""): string {
+  return process.env[name] ?? fallback;
+}
+
+export const env = {
+  MONGODB_URI: () => req("MONGODB_URI"),
+  DB_NAME: () => opt("DB_NAME", "StreamDock"),
+  GITHUB_CLIENT_ID: () => req("github_oauth_client_id"),
+  GITHUB_CLIENT_SECRET: () => req("github_oauth_client_secret"),
+  ENCRYPTION_KEY: () => req("encryption_key"),
+  REPO_OWNER: () => opt("GITHUB_REPO_OWNER", "PranavSagarXD"),
+  REPO_NAME: () => opt("GITHUB_REPO_NAME", "StreamDock"),
+  REPO_BRANCH: () => opt("GITHUB_REPO_BRANCH", "main"),
+  SITE_URL: () => opt("SITE_URL", "http://localhost:3000"),
+  REDIS_URL: () => opt("REDIS_URL", ""),
+  CF_DOMAIN_ZONE: () => opt("CF_DOMAIN_ZONE", ""),
+  CF_ACCOUNT_TOKEN: () => opt("CF_ACCOUNT_TOKEN", ""),
+};
