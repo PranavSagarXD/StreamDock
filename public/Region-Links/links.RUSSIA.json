@@ -26,7 +26,7 @@
       "sites": [
         {
           "name": "Скоро больше — добавьте предложение!",
-          "url": "https://tbcpl.lol/site-request.html",
+          "url": "/request",
           "enabled": true,
           "logo": ""
         }
@@ -38,7 +38,7 @@
       "sites": [
         {
           "name": "Скоро больше — добавьте предложение!",
-          "url": "https://tbcpl.lol/site-request.html",
+          "url": "/request",
           "enabled": true,
           "logo": ""
         }
@@ -50,7 +50,7 @@
       "sites": [
         {
           "name": "Скоро больше — добавьте предложение!",
-          "url": "https://tbcpl.lol/site-request.html",
+          "url": "/request",
           "enabled": true,
           "logo": ""
         }

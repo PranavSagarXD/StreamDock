@@ -44,7 +44,7 @@
       "sites": [
         {
           "name": "Prossimamente — aggiungi un suggerimento!",
-          "url": "https://tbcpl.lol/site-request.html",
+          "url": "/request",
           "enabled": true,
           "logo": ""
         }

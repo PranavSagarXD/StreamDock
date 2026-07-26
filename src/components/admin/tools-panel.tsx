@@ -159,7 +159,7 @@ function PurgeCacheTool() {
             value={urlsText}
             onChange={(e) => setUrlsText(e.target.value)}
             rows={4}
-            placeholder={"https://tbcpl.lol/\nhttps://tbcpl.lol/links/USA.json\nhttps://tbcpl.lol/logo/movies/foo.png"}
+            placeholder={"https://streamdock.rexd.space/\nhttps://streamdock.rexd.space/links/USA.json\nhttps://streamdock.rexd.space/logo/movies/foo.png"}
             className="w-full resize-y rounded-lg border bg-transparent px-3 py-2 font-mono text-xs"
             style={{ borderColor: "var(--border)" }}
           />

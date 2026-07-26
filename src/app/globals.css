@@ -201,10 +201,6 @@ body::before {
 .social-icon-discord {
   filter: invert(var(--social-invert));
 }
-/* Reddit: invert on dark themes with hue correction to preserve orange */
-.social-icon-reddit {
-  filter: invert(calc(1 - var(--social-invert))) hue-rotate(calc((1 - var(--social-invert)) * 180deg));
-}
 
 @keyframes pulse-soft {
   0%,

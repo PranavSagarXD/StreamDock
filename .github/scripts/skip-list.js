@@ -11,7 +11,7 @@ const SKIP_URLS = new Set([
   'https://goplay.su',
   'https://inkapelis.cyou',
   'https://www.anivault.co',
-  'https://tbcpl.lol/site-request.html',
+  'https://streamdock.rexd.space/site-request',
   'https://tv.eddit.me/',
   'https://cokcok10.com/'
 ]);

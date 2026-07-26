@@ -99,7 +99,7 @@ export async function destroySession() {
   jar.delete(COOKIE);
 }
 
-const STATE_COOKIE = "tbcpl_oauth_state";
+const STATE_COOKIE = "streamdock_oauth_state";
 
 export async function setOAuthState(state: string) {
   const jar = cookies();
