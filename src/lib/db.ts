@@ -26,9 +26,28 @@ async function getClient(): Promise<MongoClient> {
   return store.client;
 }
 
+let indexesEnsured = false;
+
 export async function db(): Promise<Db> {
   const client = await getClient();
-  return client.db(env.DB_NAME());
+  const database = client.db(env.DB_NAME());
+  if (!indexesEnsured) {
+    indexesEnsured = true;
+    ensureIndexes(database).catch(console.error);
+  }
+  return database;
+}
+
+async function ensureIndexes(database: Db) {
+  await Promise.all([
+    database.collection(COLLECTIONS.sessions).createIndex({ sid: 1 }, { unique: true }),
+    database.collection(COLLECTIONS.sessions).createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0 }),
+    database.collection(COLLECTIONS.admins).createIndex({ githubLogin: 1 }, { unique: true }),
+    database.collection(COLLECTIONS.siteRequests).createIndex({ submittedAt: -1 }),
+    database.collection(COLLECTIONS.siteRequests).createIndex({ status: 1, submittedAt: -1 }),
+    database.collection(COLLECTIONS.auditLog).createIndex({ at: -1 }),
+    database.collection(COLLECTIONS.cache).createIndex({ key: 1 }, { unique: true }),
+  ]);
 }
 
 export const COLLECTIONS = {
@@ -39,15 +58,4 @@ export const COLLECTIONS = {
   cache: "cache",
 } as const;
 
-export async function ensureIndexes() {
-  const d = await db();
-  await Promise.all([
-    d.collection(COLLECTIONS.sessions).createIndex({ sid: 1 }, { unique: true }),
-    d.collection(COLLECTIONS.sessions).createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0 }),
-    d.collection(COLLECTIONS.admins).createIndex({ githubLogin: 1 }, { unique: true }),
-    d.collection(COLLECTIONS.siteRequests).createIndex({ submittedAt: -1 }),
-    d.collection(COLLECTIONS.siteRequests).createIndex({ status: 1, submittedAt: -1 }),
-    d.collection(COLLECTIONS.auditLog).createIndex({ at: -1 }),
-    d.collection(COLLECTIONS.cache).createIndex({ key: 1 }, { unique: true }),
-  ]);
-}
+
