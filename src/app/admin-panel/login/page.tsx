@@ -27,7 +27,8 @@ export default async function AdminLoginPage({
   if (user) redirect("/admin-panel");
 
   const { error } = searchParams;
-  const message = error ? (ERROR_MESSAGES[error] ?? `Login error: ${error}`) : null;
+  const known = ERROR_MESSAGES[error ?? ""];
+  const message = error ? (known ?? `Error: ${error}`) : null;
 
   return (
     <div className="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center gap-6 text-center">

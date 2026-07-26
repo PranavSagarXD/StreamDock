@@ -56,10 +56,10 @@ export function isAdminPermission(p: RepoPermission): p is "admin" | "maintain" 
   return p === "admin" || p === "maintain" || p === "write";
 }
 
-export function authorizeUrl(state: string): string {
+export function authorizeUrl(state: string, redirectUri?: string): string {
   const params = new URLSearchParams({
     client_id: env.GITHUB_CLIENT_ID(),
-    redirect_uri: `${env.SITE_URL()}/api/auth/github/callback`,
+    redirect_uri: redirectUri ?? `${env.SITE_URL()}/api/auth/github/callback`,
     scope: "repo read:user",
     state,
     allow_signup: "false",
