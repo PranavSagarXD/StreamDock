@@ -75,7 +75,7 @@
         },
         {
           "name": "Cineby",
-          "url": "https://www.cineby.at/",
+          "url": "https://cineby.gdn/",
           "logo": "./logo/movies_shows/cineby.png",
           "enabled": true
         },
@@ -507,7 +507,7 @@
         },
         {
           "name": "iStreamEast",
-          "url": "https://streameast.cool/",
+          "url": "https://thestreameast.top/",
           "logo": "./logo/livetv/istreameast.png",
           "enabled": true
         },
