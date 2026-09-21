@@ -212,7 +212,7 @@
         },
         {
           "name": "Senshi",
-          "url": "https://senshi.live/",
+          "url": "https://senshi.to/",
           "logo": "./logo/anime/senshi.png",
           "enabled": true
         },
@@ -248,7 +248,7 @@
         },
         {
           "name": "Anistream",
-          "url": "https://anistream.one",
+          "url": "https://anistream.one/",
           "logo": "./logo/anime/anistream.png",
           "enabled": true
         },
