@@ -6,7 +6,7 @@
       "sites": [
         {
           "name": "EgyBest",
-          "url": "https://egybesstt.beauty/",
+          "url": "https://egybesstt.baby/",
           "logo": "./logo/movies_shows/egybest.png",
           "enabled": true
         },
@@ -68,7 +68,7 @@
         },
         {
           "name": "DramaCafe",
-          "url": "https://ddramacafe-tv.yachts/",
+          "url": "https://ddramacafe-tv.bar/",
           "logo": "./logo/movies_shows/dramacafe.png",
           "status": "new",
           "enabled": true
