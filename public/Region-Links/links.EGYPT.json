@@ -120,7 +120,7 @@
         },
         {
           "name": "animezid",
-          "url": "https://animezid.cam/index.php",
+          "url": "https://animezid.org/",
           "logo": "./logo/anime/animezid.png",
           "status": "new",
           "enabled": true
