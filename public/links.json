@@ -63,7 +63,7 @@
         },
         {
           "name": "FilmCave",
-          "url": "https://filmcave.ru/",
+          "url": "https://filmcave.to/",
           "logo": "./logo/movies_shows/filmcave.png",
           "enabled": true
         },
@@ -317,7 +317,7 @@
         },
         {
           "name": "Kagane",
-          "url": "https://kagane.to/",
+          "url": "https://kagane.si/",
           "logo": "./logo/manga/kagane.png",
           "enabled": true
         },
