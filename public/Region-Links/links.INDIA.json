@@ -61,7 +61,7 @@
         },
         {
           "name": "KMMovies",
-          "url": "https://k1.kmmovies.cam/",
+          "url": "https://kmmovies.cam/",
           "logo": "./logo/movies_shows/kmmovies.png",
           "enabled": true
         },
