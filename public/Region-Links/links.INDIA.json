@@ -43,7 +43,7 @@
         },
         {
           "name": "Vegamovies",
-          "url": "https://1vegamovies.pics/",
+          "url": "https://1vegamovies.shop/",
           "logo": "./logo/movies_shows/vegamovies.png",
           "enabled": true
         },
@@ -228,7 +228,7 @@
       "sites": [
         {
           "name": "natomanga",
-          "url": "https://www.natomanga.com/",
+          "url": "https://www.manganami.com/",
           "logo": "./logo/manga/natomanga.png",
           "status": "new",
           "enabled": true
