@@ -61,7 +61,7 @@
         },
         {
           "name": "KMMovies",
-          "url": "https://kmmovies.beer/",
+          "url": "https://km1.kmmovies.bond/",
           "logo": "./logo/movies_shows/kmmovies.png",
           "enabled": true
         },
